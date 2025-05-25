@@ -26,7 +26,7 @@ const Layout = () => {
       try {
         const token = await getAccessTokenSilently({
           authorizationParams: {
-            audience: "http://localhost:8000",
+            audience: "https://full-stack-real-estate-eight.vercel.app",
             scope: "openid profile email",
           },
         });
@@ -42,7 +42,7 @@ const Layout = () => {
         if (error.error === 'consent_required' || error.message.includes("Consent required")) {
           loginWithRedirect({
             authorizationParams: {
-              audience: "http://localhost:8000",
+              audience: "https://full-stack-real-estate-eight.vercel.app",
               scope: "openid profile email",
             },
           });
