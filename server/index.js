@@ -13,12 +13,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-  cors({
-    origin: "https://homyz-mu.vercel.app", // allow your frontend domain
-    credentials: true, // optional, if you're using cookies or Auth0
-  })
-);
+app.use(cors());
 
 app.use("/api/user", userRoute);
 app.use("/api/residency", residencyRoute);
