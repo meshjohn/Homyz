@@ -34,7 +34,6 @@ const Layout = () => {
         localStorage.setItem("access_token", token);
         setUserDetails((prev) => ({ ...prev, token }));
         mutate(token);
-        console.log(token);
       } catch (error) {
         console.error("Error fetching token:", error);
 
